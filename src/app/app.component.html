@@ -1,6 +1,6 @@
 <div class="container">
     <h1>
-        Angular Infiinite Lazy loading showcase:
+        Angular Infinite Lazy loading showcase:
     </h1>
     <h2 class="sticky-top bg-white">
         Scrolled index: {{scrolledIndex}} Items in viewport: 0 Items loaded: {{count}}
@@ -12,7 +12,7 @@
                                              itemSize="272"
                                              (scrolledIndexChange)="scrolledIndexChange($event)">
                     <li
-                            *cdkVirtualFor="let item of dataSource;
+                            *cdkVirtualFor="let item of itemsStream$;
                                         templateCacheSize: 0;
                                         let last = last;
                                         trackBy: titleTrackFn"
